@@ -75,35 +75,46 @@ h2 {
 
 .bingo-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 7px; /* Slightly larger gap */
+    /* This ensures all 3 columns take up equal width */
+    grid-template-columns: repeat(3, 1fr); 
+    /* NEW: This ensures all 3 rows take up equal height based on the grid container */
+    grid-template-rows: repeat(3, 1fr); 
+    /* NEW: Setting an explicit height for the whole grid to ensure 1/3 splits */
+    height: 60vh; /* Adjusts height relative to the viewport height (v-height) */
+    
+    gap: 7px; 
     width: 100%;
     max-width: 500px;
-    background-color: var(--bingo-border); /* Use border color as grid background */
+    background-color: var(--bingo-border);
     padding: 7px;
     border: 10px solid var(--bingo-border);
     border-radius: 10px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7); /* Stronger shadow */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
 }
 
 .square {
     background-color: var(--bingo-square-bg);
-    color: var(--text-color-dark); /* Darker text for readability on light square background */
+    color: var(--text-color-dark);
+    /* Changed these to Flexbox properties for perfect centering */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 10px;
-    min-height: 110px; /* Slightly taller squares */
+    
+    padding: 5px; /* Reduced padding slightly to fit more text */
+    /* REMOVED: min-height: 110px; -- No longer needed due to grid-template-rows fix */
+    
     cursor: pointer;
     font-family: sans-serif;
-    font-size: 1em; /* Slightly larger font */
+    font-size: 0.95em; /* Slightly adjusted font size */
     font-weight: bold;
     border: 2px solid var(--bingo-border);
     transition: background-color 0.3s, transform 0.1s;
-    user-select: none;
-    line-height: 1.3; /* Improve readability for multi-line dares */
+    user-select: none; 
+    line-height: 1.2; /* Tightened line height to fit text better */
+    
+    /* NEW: Ensuring text doesn't flow outside the box */
+    overflow: hidden; 
 }
 
 /* Style for a completed dare */
