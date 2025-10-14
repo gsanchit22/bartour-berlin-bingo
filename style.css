@@ -105,27 +105,50 @@ body {
 
 /* --- Header & Logo Styles --- */
 
+/* Find this block in style.css: */
+/* --- Header & Logo Styles (REVISED) --- */
+
+/* --- Header & Logo Styles (FINAL CORRECTION) --- */
+
 header {
     text-align: left;
     color: var(--light-text);
-    margin-bottom: 20px;
+    /* Reduced margin-bottom to save vertical space */
+    margin-bottom: 10px; 
     padding: 10px;
     border-radius: 10px;
     width: 100%;
     max-width: 500px;
+    
+    /* ADDED top padding to create permanent space for the dropdown */
+    padding-top: 40px; 
+    
     display: flex; 
-    align-items: center;
-    gap: 10px;
+    align-items: center; 
+    flex-wrap: nowrap; /* Prevents wrapping onto a new line */
+    gap: 10px; 
 }
 
+/* Logo Styles */
 #company-logo {
-    width: 60px;
+    /* Resetting the size to the successful static value */
+    max-width: 60px; 
+    min-width: 60px; 
     height: auto;
+    flex-shrink: 0; 
 }
 
+/* Header Text Container */
+.header-text {
+    flex-grow: 1; 
+    min-width: 0; 
+}
+
+/* Heading Sizes (Resetting to a visually balanced static size) */
 h1 {
     font-family: 'Bangers', cursive;
-    font-size: 2.2em;
+    /* Resetting to static size that worked well */
+    font-size: 2.2em; 
     letter-spacing: 2px;
     color: var(--brand-green);
     text-shadow: 1.5px 1.5px var(--brand-red);
@@ -134,12 +157,11 @@ h1 {
 
 h2 {
     font-family: 'Permanent Marker', cursive;
-    font-size: 1.2em;
-    margin-top: 0px;
+    /* Resetting to static size that worked well */
+    font-size: 1.2em; 
+    margin-top: 0px; 
     color: var(--light-text);
 }
-
-/* --- Bingo Grid Styles --- */
 
 .bingo-grid {
     display: grid;
