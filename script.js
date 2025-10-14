@@ -37,15 +37,15 @@ const LANGUAGES = {
         reset_button: "SPIEL ZURÜCKSETZEN",
         name_alert: "Bitte geben Sie einen Namen ein, um das Spiel zu starten!",
         dares: [
-            "Macht ein lustiges Gruppen-Selfie 📸",
-            "Macht jemandem ein ehrliches Kompliment 😊",
-            "Bestellt ein Getränk mit einem lustigen Akzent 🍻",
+            "Gruppen-Selfie 📸",
+            "Gebe jmd. ein ehrliches Kompliment 😊",
+            "Bestell ein Drink mit einem lustigen Akzent 🍻",
             "Stoßt mit einem zufälligen Fremden an 🥂",
-            "Gruppenfoto mit komischen Gesichtern 🤪",
-            "Erzählt eure lustigste Reise-/Trunkenheitsgeschichte ✈️",
-            "Zeigt einen Tanz-Move 💃🕺",
-            "Benutzt einen kitschigen Anmachspruch an jemandem am Tisch 😉",
-            "Tauscht Kleidung/Accessoires mit jemandem 👗🧣"
+            "Gruppenfoto mit lustigen Gesichtern 🤪",
+            "Erzählt ein Fun Fact/Sauf Story ✈️",
+            "Zeig einen Dance-Move 💃🕺",
+            "Mache einen Anmachsprach an deinem Gegenüber 😉",
+            "Tausch ein Kleidungsstück mit jmd👗🧣"
         ]
     },
     'es': {
