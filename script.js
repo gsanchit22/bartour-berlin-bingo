@@ -1,14 +1,14 @@
-// 1. Array of Dares - EASY TO CHANGE!
+// 1. Array of Dares - EASY TO CHANGE! Now with Emojis!
 const DARES = [
-    "Take a Group Selfie",
-    "Convince a stranger to teach you a funny german word",
-    "Order a drink in a fake accent",
-    "Cheers glasses with a random stranger",
-    "Tell your funniest travel/drunk story",
-    "Take a picture with someone wearing a chain",
-    "Show a Dance Move",
-    "Use a cheesy pick-up line on someone at your table",
-    "Swap clothes/accessories with someone"
+    "Take a Group Selfie 📸",
+    "Convince a stranger to teach you a funny german word 🇩🇪",
+    "Order a drink in a fake accent 🍻",
+    "Cheers glasses with a random stranger 🥂",
+    "Tell your funniest travel/drunk story ✈️",
+    "Take a picture with someone wearing a chain ⛓️",
+    "Show a Dance Move 💃🕺",
+    "Use a cheesy pick-up line on someone at your table 😉",
+    "Swap clothes/accessories with someone 👗🧣"
 ];
 
 // Variables to track game state
