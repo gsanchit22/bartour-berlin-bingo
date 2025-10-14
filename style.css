@@ -1,0 +1,276 @@
+/* Custom Fonts for the Berlin Bartour Vibe */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&display=swap');
+
+:root {
+    /* Updated Brand Colors from Logo */
+    --brand-green: #00ff00; /* Bright green from 'BARTOUR BERLIN' text */
+    --brand-red: #cc3333;  /* Red from Brandenburg Gate */
+    --dark-bg: #333333;    /* Darker background for contrast with logo */
+    --light-text: #f0ead6; /* Light, slightly off-white for text on dark bg */
+    --bingo-square-bg: #f0ead6; /* Background for the squares, similar to light text */
+    --bingo-border: #888888; /* A neutral border for the grid */
+    --text-color-dark: #222222; /* Darker text for light backgrounds */
+}
+
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--dark-bg); /* Dark background matching the logo's strong contrast */
+    color: var(--light-text);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 10px;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXc0NjY2NDY0NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIzIiBjeT0iMyIgcj0iMiIgZmlsbD0iIzQwNDA0MCIvPjwvc3ZnPg=='); /* Subtle pattern */
+}
+
+header {
+    /* OLD: text-align: center; */
+    text-align: left; /* Aligns text left within its container */
+    color: var(--light-text);
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+
+    /* New Flexbox properties for horizontal layout */
+    display: flex; 
+    align-items: center; /* Vertically center the logo and text */
+    gap: 10px; /* Space between logo and text */
+}
+
+/* New style for the logo */
+#company-logo {
+    /* max-width: 100%; <- OLD */
+    width: 60px; /* Set a fixed, small width */
+    height: auto;
+    /* margin-bottom: 10px; <- OLD, now controlled by 'gap' on header */
+}
+
+h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 2.2em; /* Smaller to fit nicely next to the logo */
+    letter-spacing: 2px;
+    color: var(--brand-green);
+    text-shadow: 1.5px 1.5px var(--brand-red);
+    line-height: 1;
+}
+
+h2 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.2em; /* Smaller to fit nicely next to the logo */
+    margin-top: 0px; /* Reset margin */
+    color: var(--light-text);
+}
+
+/* --- Bingo Grid Styles --- */
+
+.bingo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 7px; /* Slightly larger gap */
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--bingo-border); /* Use border color as grid background */
+    padding: 7px;
+    border: 10px solid var(--bingo-border);
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7); /* Stronger shadow */
+}
+
+.square {
+    background-color: var(--bingo-square-bg);
+    color: var(--text-color-dark); /* Darker text for readability on light square background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    min-height: 110px; /* Slightly taller squares */
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 1em; /* Slightly larger font */
+    font-weight: bold;
+    border: 2px solid var(--bingo-border);
+    transition: background-color 0.3s, transform 0.1s;
+    user-select: none;
+    line-height: 1.3; /* Improve readability for multi-line dares */
+}
+
+/* Style for a completed dare */
+.square.completed {
+    background-color: var(--brand-red); /* Changes to brand red on complete */
+    color: var(--light-text); /* Light text on red background */
+    text-decoration: line-through;
+    transform: scale(0.98);
+    border-color: var(--light-text);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Button Style --- */
+
+#reset-button {
+    background-color: var(--brand-green); /* Button background in brand green */
+    color: var(--text-color-dark); /* Dark text for contrast */
+    border: 3px solid var(--brand-red); /* Border in brand red */
+    padding: 12px 25px; /* Slightly larger padding */
+    margin-top: 25px; /* More space */
+    font-size: 1.2em; /* Larger font */
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px; /* Slightly more rounded */
+    transition: background-color 0.2s, transform 0.1s;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+#reset-button:hover {
+    background-color: #00e600; /* Slightly darker green on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* --- Modal (Pop-up) Styles --- */
+
+/* The shared modal container */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Darker, more opaque overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.modal-content {
+    background-color: var(--bingo-square-bg); /* Pop-up background same as squares */
+    color: var(--text-color-dark);
+    padding: 40px; /* More padding */
+    border-radius: 20px; /* More rounded */
+    text-align: center;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.7); /* Brighter shadow for pop */
+    max-width: 90%; /* Wider on small screens */
+    border: 5px solid var(--brand-red); /* Strong border matching brand red */
+    position: relative; /* Needed for positioning the close button */
+    animation: none; /* Remove pulse animation from generic modal content */
+}
+
+/* Style for the Win Pop-up (to keep the pulse animation) */
+#win-popup .modal-content {
+    animation: pulse 1s infinite alternate; /* Keep the fun winning animation */
+}
+
+.modal-content h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 3em; 
+    margin-bottom: 15px;
+    color: var(--brand-red); 
+    text-shadow: 2px 2px var(--brand-green); 
+}
+
+.modal-content p {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--text-color-dark);
+    margin-bottom: 20px;
+}
+
+/* Style for the new input field */
+#name-input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 3px solid var(--brand-green);
+    border-radius: 5px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+/* Style for the Start Game Button (reusing Reset Button styles) */
+#start-game-button {
+    /* Copying the styles from #reset-button */
+    background-color: var(--brand-green); 
+    color: var(--text-color-dark); 
+    border: 3px solid var(--brand-red); 
+    padding: 12px 25px; 
+    font-size: 1.2em; 
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px; 
+    transition: background-color 0.2s, transform 0.1s;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#start-game-button:hover {
+    background-color: #00e600;
+    transform: translateY(-2px);
+}
+
+/* --- Close Button Style (for both modals) --- */
+.close-btn {
+    color: var(--brand-red);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1; /* Keep the 'x' centered */
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: var(--text-color-dark);
+}
+
+/* Animation for the win pop-up */
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+/* ... existing media query here ... */
+
+/* Media query for very small screens (e.g., iPhone SE) */
+@media (max-width: 375px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    .square {
+        min-height: 90px;
+        font-size: 0.85em;
+        padding: 8px;
+    }
+    #reset-button {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+    .popup-content h3 {
+        font-size: 2em;
+    }
+    .popup-content p {
+        font-size: 1em;
+    }
+}
