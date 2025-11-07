@@ -15,12 +15,12 @@ const LANGUAGES = {
         dares: [
             "Take a Funny Group Selfie 📸",
             "Compliment someone Honestly 😊",
-            "Order a drink in a fake accent 🍻",
+            "Order a drink with a smile and a tip 🍻",
             "Cheers glasses with a random stranger 🥂",
             "Group picture with weird Faces 🤪",
             "Tell your funniest travel/drunk story ✈️",
             "Show a Dance Move 💃🕺",
-            "Use a cheesy pick-up line on someone at your table 😉",
+            "Win a rock paper scissor duel 😉",
             "Swap clothes/accessories with someone 👗🧣"
         ]
     },
@@ -39,12 +39,12 @@ const LANGUAGES = {
         dares: [
             "Gruppen-Selfie 📸",
             "Gebe jmd. ein ehrliches Kompliment 😊",
-            "Bestell ein Drink mit einem lustigen Akzent 🍻",
+            "Bestelle ein Getränk mit einem Lächeln und Trinkgeld 🍻",
             "Stoßt mit einem zufälligen Fremden an 🥂",
             "Gruppenfoto mit lustigen Gesichtern 🤪",
             "Erzählt ein Fun Fact/Sauf Story ✈️",
             "Zeig einen Dance-Move 💃🕺",
-            "Mache einen Anmachsprach an deinem Gegenüber 😉",
+            "Gewinne ein Schere-Stein-Papier-Duell 😉",
             "Tausch ein Kleidungsstück mit jmd👗🧣"
         ]
     },
@@ -63,12 +63,12 @@ const LANGUAGES = {
         dares: [
             "Tómate una selfie grupal divertida 📸",
             "Haz un cumplido sincero a alguien 😊",
-            "Pide una bebida con un acento falso 🍻",
+            "Pide una bebida con una sonrisa y una propina 🍻",
             "Choca copas con un extraño al azar 🥂",
             "Foto grupal con caras raras 🤪",
             "Cuenta tu historia de viaje/borracho más divertida ✈️",
             "Muestra un paso de baile 💃🕺",
-            "Usa una frase cursi para ligar con alguien en tu mesa 😉",
+            "Gana un duelo de piedra, papel o tijera 😉",
             "Intercambia ropa/accesorios con alguien 👗🧣"
         ]
     }
