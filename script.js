@@ -15,7 +15,7 @@ const LANGUAGES = {
         dares: [
             "Take a Group Selfie 📸",
             "Compliment someone Honestly 😊",
-            "Order a drink in a funny accent 🍻",
+            "Order a drink with a tip 🍻",
             "Cheers glasses with a random stranger 🥂",
             "Group picture with weird Faces 🤪",
             "Tell your funniest travel/drunk story ✈️",
@@ -39,7 +39,7 @@ const LANGUAGES = {
         dares: [
             "Mach ein Gruppen-Selfie. 📸",
             "Gebe jmd. ein ehrliches Kompliment 😊",
-            "Bestell dir ein Getränk mit ’nem lustigen Akzent.🍻",
+            "Bestellen Sie ein Getränk mit Trinkgeld.🍻",
             "Stoßt mit einem zufälligen Fremden an 🥂",
             "Gruppenfoto mit lustigen Gesichtern 🤪",
             "Erzählt ein Fun Fact/Sauf Story ✈️",
@@ -63,7 +63,7 @@ const LANGUAGES = {
         dares: [
             "Haz un selfie en grupo 📸",
             "Haz un cumplido sincero a alguien 😊",
-            "Pide una bebida con un acento gracioso🍻",
+            "Pide una bebida con propina.🍻",
             "Choca copas con un extraño al azar 🥂",
             "Foto grupal con caras raras 🤪",
             "Cuenta tu historia de viaje/borracho más divertida ✈️",
